@@ -1,0 +1,13 @@
+prefix=/Users/bhaskarrai/Desktop/projects/project_2/env
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+modules=1
+
+Name: libXML
+Version: 2.13.8
+Description: libXML library version2.
+Requires.private:  icu-i18n
+Libs: -L${libdir} -lxml2 
+Libs.private:  -L/Users/bhaskarrai/Desktop/projects/project_2/env/lib -lz -L/Users/bhaskarrai/Desktop/projects/project_2/env/lib -llzma  -L/Users/bhaskarrai/Desktop/projects/project_2/env/lib -liconv    
+Cflags: -I${includedir}/libxml2 -I/Users/bhaskarrai/Desktop/projects/project_2/env/include 

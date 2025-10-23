@@ -1,0 +1,12 @@
+prefix=/Users/bhaskarrai/Desktop/projects/project_2/env
+version=3.0.1
+exec_prefix=${prefix}/bin
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+Name: xgboost
+Description: XGBoost - Scalable and Flexible Gradient Boosting.
+Version: ${version}
+
+Cflags: -I${includedir}
+Libs: -L${libdir} -lxgboost

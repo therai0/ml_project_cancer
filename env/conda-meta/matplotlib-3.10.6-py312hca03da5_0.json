@@ -1,0 +1,33 @@
+{
+  "build": "py312hca03da5_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/noarch",
+  "constrains": [],
+  "depends": [
+    "python >=3.12,<3.13.0a0",
+    "tornado >=5",
+    "matplotlib-base >=3.10.6,<3.10.7.0a0"
+  ],
+  "extracted_package_dir": "/opt/miniconda3/pkgs/matplotlib-3.10.6-py312hca03da5_0",
+  "files": [],
+  "fn": "matplotlib-3.10.6-py312hca03da5_0.conda",
+  "license": "LicenseRef-PSF-based",
+  "link": {
+    "source": "/opt/miniconda3/pkgs/matplotlib-3.10.6-py312hca03da5_0",
+    "type": 1
+  },
+  "md5": "86f85d1ea1b5519237b036f034216004",
+  "name": "matplotlib",
+  "package_tarball_full_path": "/opt/miniconda3/pkgs/matplotlib-3.10.6-py312hca03da5_0.conda",
+  "paths_data": {
+    "paths": [],
+    "paths_version": 1
+  },
+  "requested_spec": "matplotlib",
+  "sha256": "f2caf489953534e68edafb3e704030fc60652b851a94466c7511da7c7f296ff5",
+  "size": 6835,
+  "subdir": "osx-arm64",
+  "timestamp": 1757685929000,
+  "url": "https://repo.anaconda.com/pkgs/main/osx-arm64/matplotlib-3.10.6-py312hca03da5_0.conda",
+  "version": "3.10.6"
+}

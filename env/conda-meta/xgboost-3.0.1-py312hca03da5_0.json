@@ -1,0 +1,32 @@
+{
+  "build": "py312hca03da5_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/osx-arm64",
+  "constrains": [],
+  "depends": [
+    "python >=3.12,<3.13.0a0",
+    "py-xgboost 3.0.1 py312hca03da5_0"
+  ],
+  "extracted_package_dir": "/opt/miniconda3/pkgs/xgboost-3.0.1-py312hca03da5_0",
+  "files": [],
+  "fn": "xgboost-3.0.1-py312hca03da5_0.conda",
+  "license": "Apache-2.0",
+  "link": {
+    "source": "/opt/miniconda3/pkgs/xgboost-3.0.1-py312hca03da5_0",
+    "type": 1
+  },
+  "md5": "90e08c77df1cff132a55684b836cdc41",
+  "name": "xgboost",
+  "package_tarball_full_path": "/opt/miniconda3/pkgs/xgboost-3.0.1-py312hca03da5_0.conda",
+  "paths_data": {
+    "paths": [],
+    "paths_version": 1
+  },
+  "requested_spec": "xgboost",
+  "sha256": "261022cfea17cf5d26491bf1f6f7244eba811d6c9dc4c62fd502e3ef10f0de4d",
+  "size": 14227,
+  "subdir": "osx-arm64",
+  "timestamp": 1749631341000,
+  "url": "https://repo.anaconda.com/pkgs/main/osx-arm64/xgboost-3.0.1-py312hca03da5_0.conda",
+  "version": "3.0.1"
+}
