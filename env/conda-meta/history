@@ -143,3 +143,8 @@
 +defaults/osx-arm64::py-xgboost-3.0.1-py312hca03da5_0
 +defaults/osx-arm64::xgboost-3.0.1-py312hca03da5_0
 # update specs: ['xgboost']
+==> 2025-10-24 14:59:33 <==
+# cmd: /opt/miniconda3/bin/conda install dill
+# conda version: 25.5.1
++defaults/osx-arm64::dill-0.4.0-py312hca03da5_0
+# update specs: ['dill']
