@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Heart Failure Prediction — Dataset Overview</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #f6f8fb;
+        --card: #ffffff;
+        --muted: #6b7280;
+        --accent: #0f766e;
+        --glass: rgba(15, 118, 110, 0.06);
+        --radius: 14px;
+        font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background: linear-gradient(180deg, var(--bg), #ffffff 60%);
+        color: #0f172a;
+      }
+      .wrap {
+        max-width: 980px;
+        margin: 48px auto;
+        padding: 28px;
+      }
+      .card {
+        background: var(--card);
+        border-radius: var(--radius);
+        box-shadow: 0 6px 30px rgba(15, 23, 42, 0.06);
+        padding: 28px;
+      }
+      header {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        margin-bottom: 18px;
+      }
+      .logo {
+        width: 64px;
+        height: 64px;
+        border-radius: 10px;
+        background: var(--glass);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        color: var(--accent);
+        font-size: 20px;
+      }
+      h1 {
+        margin: 0;
+        font-size: 20px;
+      }
+      p.lead {
+        margin: 6px 0 0;
+        color: var(--muted);
+        font-size: 13px;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr 320px;
+        gap: 20px;
+        margin-top: 18px;
+      }
+      .section {
+        padding: 14px;
+        border-radius: 12px;
+        background: linear-gradient(
+          180deg,
+          rgba(15, 118, 110, 0.02),
+          transparent
+        );
+      }
+      .section h2 {
+        margin: 0;
+        font-size: 16px;
+      }
+      .section p {
+        color: var(--muted);
+        font-size: 14px;
+        line-height: 1.5;
+      }
+      .attrs {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+        margin-top: 12px;
+      }
+      .attr {
+        background: #fff;
+        padding: 10px;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(2, 6, 23, 0.03);
+        font-size: 13px;
+      }
+      .attr b {
+        display: block;
+        color: #0f172a;
+        margin-bottom: 6px;
+      }
+      .links {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+      .links a {
+        display: inline-block;
+        padding: 10px;
+        border-radius: 8px;
+        text-decoration: none;
+        background: var(--card);
+        box-shadow: 0 2px 10px rgba(2, 6, 23, 0.03);
+        color: var(--accent);
+        font-weight: 600;
+        font-size: 13px;
+      }
+      footer {
+        margin-top: 18px;
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      /* === Prediction Form === */
+      form.prediction-form {
+        margin-top: 40px;
+        background: #ffffff;
+        border-radius: var(--radius);
+        box-shadow: 0 6px 26px rgba(15, 23, 42, 0.08);
+        padding: 30px;
+        border: 1px solid rgba(15, 118, 110, 0.1);
+      }
+      form.prediction-form h2 {
+        font-size: 18px;
+        margin-bottom: 8px;
+        color: var(--accent);
+        text-align: center;
+      }
+      form.prediction-form p {
+        text-align: center;
+        color: var(--muted);
+        font-size: 13px;
+        margin-top: 0;
+      }
+      .form-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px 24px;
+        margin-top: 24px;
+      }
+      label {
+        display: block;
+        font-weight: 600;
+        font-size: 13px;
+        margin-bottom: 6px;
+        color: #0f172a;
+      }
+      input,
+      select {
+        width: 100%;
+        padding: 10px 12px;
+        border-radius: 8px;
+        border: 1px solid #e2e8f0;
+        background: #f9fafb;
+        font-size: 14px;
+        transition: border-color 0.2s, box-shadow 0.2s;
+      }
+      input:focus,
+      select:focus {
+        outline: none;
+        border-color: var(--accent);
+        box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.15);
+      }
+      button {
+        grid-column: 1 / -1;
+        margin-top: 20px;
+        padding: 14px;
+        background: var(--accent);
+        color: white;
+        font-weight: 600;
+        border: none;
+        border-radius: 10px;
+        font-size: 15px;
+        cursor: pointer;
+        transition: background 0.25s ease;
+      }
+      button:hover {
+        background: #115e59;
+      }
+
+      @media (max-width: 880px) {
+        .grid {
+          grid-template-columns: 1fr;
+        }
+        .links {
+          flex-direction: row;
+          flex-wrap: wrap;
+        }
+        .links a {
+          flex: 1;
+        }
+        .attrs {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="card">
+        <header>
+          <div class="logo">HF</div>
+          <div>
+            <h1>Heart Failure Prediction Dataset</h1>
+            <p class="lead">
+              A clean summary of the dataset used for heart disease / heart
+              failure prediction tasks.
+            </p>
+          </div>
+        </header>
+
+        <div class="grid">
+          <main class="section">
+            <h2>About Dataset</h2>
+            <p style="margin-top: 10px">
+              Cardiovascular diseases (CVDs) are the number 1 cause of death
+              globally — an estimated 17.9 million lives each year (~31% of all
+              deaths). Heart failure often results from CVDs. This dataset
+              contains 11 features that can be used to predict possible heart
+              disease and is a combined, cleaned version of multiple heart
+              datasets for research purposes.
+            </p>
+
+            <h2 style="margin-top: 16px">Context</h2>
+            <p>
+              People with cardiovascular disease or at high cardiovascular risk
+              (hypertension, diabetes, hyperlipidaemia, etc.) need early
+              detection and management. Machine learning models can assist
+              clinicians by flagging high-risk patients for further evaluation.
+            </p>
+
+            <h2 style="margin-top: 16px">Attribute Information</h2>
+            <div class="attrs">
+              <div class="attr"><b>Age</b>Age of the patient (years)</div>
+              <div class="attr"><b>Sex</b>M: Male, F: Female</div>
+              <div class="attr"><b>ChestPainType</b>TA, ATA, NAP, ASY</div>
+              <div class="attr">
+                <b>RestingBP</b>Resting blood pressure (mm Hg)
+              </div>
+              <div class="attr">
+                <b>Cholesterol</b>Serum cholesterol (mg/dl)
+              </div>
+              <div class="attr"><b>FastingBS</b>1 if >120 mg/dl, else 0</div>
+              <div class="attr"><b>RestingECG</b>Normal, ST, LVH</div>
+              <div class="attr">
+                <b>MaxHR</b>Maximum heart rate achieved (60–202)
+              </div>
+              <div class="attr"><b>ExerciseAngina</b>Y / N</div>
+              <div class="attr">
+                <b>Oldpeak</b>ST depression measured (numeric)
+              </div>
+              <div class="attr"><b>ST_Slope</b>Up / Flat / Down</div>
+            </div>
+
+            <h2 style="margin-top: 16px">Target</h2>
+            <p>
+              <b>HeartDisease</b> — output class: <code>1</code> means heart
+              disease; <code>0</code> means normal.
+            </p>
+
+            <h2 style="margin-top: 16px">Source & Notes</h2>
+            <p>
+              This dataset was created by combining five heart datasets
+              (Cleveland, Hungarian, Switzerland, Long Beach VA, Stalog) and
+              then cleaning duplicates. Final dataset: 918 observations. For the
+              original index of heart disease datasets, see the UCI repository.
+            </p>
+
+            <p style="margin-top: 10px">
+              <a
+                href="https://archive.ics.uci.edu/ml/machine-learning-databases/heart-disease/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >UCI Heart Disease — Index (original sources)</a
+              >
+            </p>
+          </main>
+
+          <aside>
+            <div class="section">
+              <h2>Similar Datasets</h2>
+              <div class="links" style="margin-top: 10px">
+                <a href="#">Hepatitis C Dataset: LINK</a>
+                <a href="#">Body Fat Prediction Dataset: LINK</a>
+                <a href="#">Cirrhosis Prediction Dataset: LINK</a>
+                <a href="#">Stroke Prediction Dataset: LINK</a>
+                <a href="#">Stellar Classification Dataset - SDSS17: LINK</a>
+                <a href="#">Wind Speed Prediction Dataset: LINK</a>
+                <a href="#">Spanish Wine Quality Dataset: LINK</a>
+              </div>
+              <h2 style="margin-top: 14px">Dataset Composition</h2>
+              <p style="margin-top: 8px; color: var(--muted); font-size: 13px">
+                Cleveland: 303 observations<br />
+                Hungarian: 294 observations<br />
+                Switzerland: 123 observations<br />
+                Long Beach VA: 200 observations<br />
+                Stalog (Heart): 270 observations<br />
+                <b>Total:</b> 1190 observations<br />
+                <b>Duplicates:</b> 272<br />
+                <b>Final:</b> 918 observations
+              </p>
+            </div>
+            <div style="text-align: center; margin-top: 24px">
+              <a href="{{url_for('predict_data')}}" class="predict-btn">Go to Prediction →</a>
+            </div>
+          </aside>
+        </div>
+
+        <footer>
+          <p>
+            Created for Heart Failure Prediction — concise dataset overview and
+            interactive input form for model prediction.
+          </p>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>

@@ -148,3 +148,14 @@
 # conda version: 25.5.1
 +defaults/osx-arm64::dill-0.4.0-py312hca03da5_0
 # update specs: ['dill']
+==> 2025-10-24 15:08:05 <==
+# cmd: /opt/miniconda3/bin/conda install Flask
+# conda version: 25.5.1
++defaults/osx-arm64::blinker-1.9.0-py312hca03da5_0
++defaults/osx-arm64::click-8.2.1-py312hca03da5_0
++defaults/osx-arm64::flask-3.1.2-py312hca03da5_0
++defaults/osx-arm64::itsdangerous-2.2.0-py312hca03da5_0
++defaults/osx-arm64::jinja2-3.1.6-py312hca03da5_0
++defaults/osx-arm64::markupsafe-3.0.2-py312h80987f9_0
++defaults/osx-arm64::werkzeug-3.1.3-py312hca03da5_0
+# update specs: ['flask']
